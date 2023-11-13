@@ -41,7 +41,7 @@ class RockRollRadio:
     def add_emision(self,emision:"Emision")->None:
         emision.get_programa().add_emision(emision)
 
-    def add_invitados(self,invitado:"Invitados", emision:"Emision")->None:
+    def add_invitado(self,invitado:"Invitados", emision:"Emision")->None:
         self.__invitados.append(invitado)
         invitado.add_emision(emision)
         emision.add_invitado(invitado)

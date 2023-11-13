@@ -3,13 +3,12 @@ from typing import List,Any,Optional
 from Person import Locutor
 
 class Programa:
-    def __init__(self, nombre:str, locutores: List["Locutor"]) -> None:
+    def __init__(self, nombre:str, locutores: "Locutor") -> None:
         self.__nombre= nombre
         self.__serial:int=None
         self.__emisiones: List["Emision"]=[]
-        self.__locutores= locutores
-        for locutor in self.__locutores:
-            locutor.add_programa(self)
+        self.__locutores: List["Locutor"]= [locutores]
+        self.__locutores[0].add_programa(self)
     
     @property
     def name(self)-> str:
