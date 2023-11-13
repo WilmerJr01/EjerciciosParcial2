@@ -8,6 +8,22 @@ class RockRollRadio:
         self.__locutores: List["Locutor"] = []
         self.__programas: List["Programa"] = []
     
+    @property
+    def locutores(self)-> List["Locutor"]:
+        return self.__locutores
+    
+    @property
+    def artistas(self)-> List["Artistas"]:
+        return self.__artistas
+    
+    @property
+    def programas(self)-> List["Programa"]:
+        return self.__programas
+    
+    @property
+    def canciones(self)-> List["Cancion"]:
+        return self.__canciones
+    
     def add_locutor(self,locutor:"Locutor")->None:
         self.__locutores.append(locutor)
     
