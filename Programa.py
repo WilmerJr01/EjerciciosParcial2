@@ -23,6 +23,8 @@ class Programa:
         locutor.add_programa(self)
         return True
     
+    def get_emision(self) -> List["Emision"]:
+        return self.__emisiones
 
     def get_last_emision(self)-> "Emision":
         return self.__emisiones[-1]
@@ -45,3 +47,6 @@ class Emision:
     def add_invitado(self, invitado:"Invitado")->bool:
         self.__invitados.append(invitado)
         return True
+    
+    def get_cancion(self)->List["Cancion"]:
+        return self.__canciones
