@@ -45,21 +45,24 @@ class RockRollRadio:
         emision.add_invitado(invitado)
     
     def get_programa_con_mas_canciones_de_artista(self, artista:"Artista")->"Programa":
-        aux_artista = None
+        aux_programa = None
+        max_contador = 0
+
         for programa in self.__programas:
             contador = 0
-            max = 0
+
             for emision in programa.get_emision():
-                for art in self.__artistas:
-                    for cancion in emision.get_cancion():
-                        if art == cancion.get_artista():
-                            contador = contador + 1
-                    if contador > max:
-                        max = contador
-                        aux_artista = art
-            
-            if aux_artista == artista:
-                return programa
+                for cancion in emision.get_cancion():
+                    if artista == cancion.get_artista():
+                        contador += 1
+
+    # Verificar si este programa tiene más canciones del artista que el máximo anterior
+            if contador > max_contador:
+                max_contador = contador
+                aux_programa = programa
+
+# Devolver el programa con más canciones del artista
+        return aux_programa
 
             
     
