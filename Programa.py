@@ -11,7 +11,7 @@ class Programa:
         self.__locutores[0].add_programa(self)
     
     @property
-    def name(self)-> str:
+    def nombre(self)-> str:
         return self.__nombre
     
     def add_emision(self, emision:"Emision") ->bool:
