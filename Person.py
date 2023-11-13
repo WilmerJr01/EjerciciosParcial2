@@ -28,5 +28,10 @@ class Artista(Persona):
         super().__init__(nombre)
         self.__canciones: List["Cancion"]= []
     
+    @property
+    def nombre(self)->None:
+        return self._nombre
+    
     def add_cancion(self, cancion: "Cancion") ->bool:
         self.__canciones.append(cancion)
+    
