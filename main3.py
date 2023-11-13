@@ -1,4 +1,6 @@
 from __future__ import annotations
+from RockRollRadio import RockRollRadio
+from Cancion import Cancion, Genero
 
 def main() -> None:
     radio = RockRollRadio()
