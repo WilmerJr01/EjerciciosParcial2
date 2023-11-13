@@ -22,7 +22,11 @@ class Programa:
         self.__locutores.append(locutor)
         locutor.add_programa(self)
         return True
+    
 
+    def get_last_emision(self)-> "Emision":
+        return self.__emisiones[-1]
+        
 class Emision:
     def __init__(self, programa:"Programa")-> None:
         self.__serial:int = None
