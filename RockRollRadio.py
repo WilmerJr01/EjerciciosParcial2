@@ -43,9 +43,11 @@ class RockRollRadio:
                     if contador > max:
                         max = contador
                         aux_artista = art
+            
+            if aux_artista == artista:
+                return programa
 
-                
-        return aux_artista
+            
     
 
     
